@@ -1,0 +1,365 @@
+<!DOCTYPE html>  <!-- This tells the browser that the document is HTML5, ensuring modern features and standards are applied. -->
+<html lang="en">  
+
+<head>
+  <meta charset="UTF-8" />  <!-- Sets the character encoding so the website can correctly display letters, numbers, and symbols in all languages. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" /> <!-- Imports the Remix Icon library so we can use modern icons throughout the website without images. -->
+  <link rel="stylesheet" href="css/style.css" />  <!-- Connects the custom CSS file that styles the website’s layout, colors, fonts, and spacing. -->
+  <title>Elysian Palace Hotel</title>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav>  <!-- Defines the navigation section for the website, which contains links to different sections. -->
+    <div class="nav__bar">
+      <div class="nav__header">
+        <div class="logo nav__logo">
+          <img src="assets/images/news/header-1.jpg" width="50" alt="logo" />
+          <span>ELYSIAN<br />PALACE HOTEL</span>  <!-- Shows the hotel name next to the logo. <br /> creates a line break between 'Elysian' and 'Palace Hotel'. -->
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">  <!-- This is the hamburger menu icon that appears on smaller screens to toggle the navigation menu. -->
+          <i class="ri-menu-line"></i> <!-- Uses a Remix icon for the menu symbol. -->
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">   <!-- List of clickable links in the navigation bar. -->
+        <li><a href="#home">Home</a></li>   <!-- Link to scroll to the Home section. -->
+        <li><a href="#about">About</a></li>
+        <li><a href="#room">Rooms</a></li>
+        <li><a href="#feature">Facilities</a></li>
+        <li><a href="#menu">Dining</a></li>
+        <li><a href="#ai">AI Assistant</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HEADER -->
+  <header class="header" id="home">   <!-- Main hero section at the top of the page with background video and welcome text. -->
+    <video autoplay muted loop class="hero-video">   <!-- Plays a video in the background automatically, without sound, and loops continuously. -->
+      <source src="assets/videos/video-1.mp4" type="video/mp4" />        <!-- Points to the video file to be played. -->
+    </video>
+    <div class="header__content">   <!-- Container for the text overlay on top of the video. -->
+      <h1>Welcome to Elysian Palace Hotel</h1>    <!-- Main headline that greets visitors. -->
+      <p>Luxury • Comfort • Ethiopian Hospitality</p>   <!-- Subtitle describing key features and values of the hotel. -->
+      <a href="#rooms" class="btn">Explore Rooms</a>       <!-- Button that scrolls users to the Rooms section when clicked. -->
+    </div>
+  </header>
+
+  <!-- BOOKING FORM -->
+
+  <section id="booking" class="booking">  <!-- Section where users can check room availability and make bookings. -->
+  <div class="booking__container">
+    <h2 class="section__header" style="color:#fff; text-align:center; margin-bottom:2rem;">
+      Check Availability & Book Your Room
+    </h2>    <!-- Header for the booking section with white color and centered alignment. -->
+
+    <form class="booking__form">   <!-- Form element to collect user input for booking. -->
+      <div class="input__group">
+        <label for="name">Full Name</label>  <!-- Label for the name input, connects to input via 'for' attribute. -->
+        <input type="text" id="name" placeholder="Enter your full name" required>   <!-- Text input for the guest's full name. 'required' ensures it must be filled. -->
+      </div>
+
+      <div class="input__group">
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+      </div>
+
+      <div class="input__group">
+        <label for="room">Room Type</label>
+        <select id="room" required>     <!-- Dropdown menu to select a room type. -->
+          <option value="">Select Room</option>
+          <option value="deluxe">Deluxe Room</option>
+          <option value="executive">Executive Room</option>
+          <option value="suite">Suite</option>
+          <option value="family">Family Room</option>
+        </select>
+      </div>
+
+      <div class="input__group">
+        <label for="checkin">Check-In Date</label>
+        <input type="date" id="checkin" required>
+      </div>
+
+      <div class="input__group">
+        <label for="checkout">Check-Out Date</label>
+        <input type="date" id="checkout" required>
+      </div>
+
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->     <!-- Section describing the hotel, its mission, and offerings. -->
+<section class="about" id="about">
+  <div class="section__container about__container">
+    
+    <!-- Main Text -->
+    <div class="about__content">
+      <p class="section__subheader">ABOUT US</p>
+      <h2 class="section__header">Discover Elegance & Comfort</h2>   <!-- Section title. -->
+      <p class="section__description">
+        Elysian Palace Hotel offers luxury, comfort, and breathtaking views,
+        ensuring a memorable stay for every guest. Enjoy curated dining,
+        elegant suites, and personalized service for a truly exceptional experience.
+      </p>
+       <!-- Detailed description about the hotel. -->
+
+      <a href="#booking" class="btn btn--primary">Book Now</a>   <!-- Button linking to the booking section. -->
+    </div>
+
+    <!-- Cards Container -->
+    <div class="about__cards">
+      <div class="about__card">
+        <img src="assets/images/news/car-1.png" alt="Hospitality Experts" />
+        <div class="about__text">
+          <h4>Hospitality Experts</h4>
+          <p>Providing top-tier service for an unforgettable stay.</p>
+        </div>
+      </div>
+
+      <div class="about__card">
+        <img src="assets/images/news/about-2.jpg" alt="Luxury Suites" />
+        <div class="about__text">
+          <h4>Tailored Luxury Suites</h4>
+          <p>Experience comfort and elegance in our exquisitely designed rooms.</p>
+        </div>
+      </div>
+    </div>
+
+  </div> <!-- end of about__container -->
+</section>
+  <!-- ROOMS -->
+  <section class="room__container" id="room">   <!-- Shows available rooms with images, descriptions, and pricing. -->
+    <p class="section__subheader">ROOMS</p>
+    <h2 class="section__header">Hand-Picked Luxury Rooms</h2>
+    <div class="room__grid">
+      <div class="room__card">
+        <img src="assets/images/rooms/room-1.jpg" alt="room" />
+        <div class="room__card__details">
+          <div>
+            <h4>Oceanview Signature Suite</h4>
+            <p>Elegant room with ocean view and premium amenities.</p>
+          </div>
+          <h3>12,000ETB<span>/night</span></h3>
+        </div>
+      </div>
+      <div class="room__card">
+        <img src="assets/images/rooms/room-2.jpg" alt="room" />
+        <div class="room__card__details">
+          <div>
+            <h4>Garden Family Retreat</h4>
+            <p>Spacious rooms ideal for families with living area.</p>
+          </div>
+          <h3>18,000ETB<span>/night</span></h3>
+        </div>
+      </div>
+      <div class="room__card">
+        <img src="assets/images/rooms/room-3.jpg" alt="room" />
+        <div class="room__card__details">
+          <div>
+            <h4>Skyline Penthouse</h4>
+            <p>Exclusive top-floor room with stunning city views.</p>
+          </div>
+          <h3>25,000ETB<span>/night</span></h3>
+        </div>
+      </div>
+
+      <!-- New Rooms for second row -->
+      <div class="room__card">
+        <img src="assets/images/rooms/room-4.jpg" alt="room" />
+        <div class="room__card__details">
+          <div>
+            <h4>Mountain View Suite</h4>
+            <p>Relax with stunning mountain scenery.</p>
+          </div>
+          <h3>15,000ETB<span>/night</span></h3>
+        </div>
+      </div>
+      <div class="room__card">
+        <img src="assets/images/rooms/room-5.jpg" alt="room" />
+        <div class="room__card__details">
+          <div>
+            <h4>Executive Deluxe</h4>
+            <p>Spacious and elegant room for business travelers.</p>
+          </div>
+          <h3>20,000ETB<span>/night</span></h3>
+        </div>
+      </div>
+      
+    <div class="room__card">
+  <img src="assets/images/rooms/room-deluxe.jpg" alt="Rooftop Suite" />
+  <div class="room__card__details">
+    <div>
+      <h4>Rooftop Suite</h4>
+      <p>Experience city lights from the top floor.</p>
+    </div>
+    <h3>22,000ETB<span>/night</span></h3>
+  </div>
+</div>
+  </section>
+
+  <!-- FACILITIES -->
+<section class="section__container feature__container" id="feature">
+  <p class="section__subheader">FACILITIES</p>
+  <h2 class="section__header">Core Features</h2>
+  <div class="feature__grid">
+    <div class="feature__card">
+      <span><i class="ri-time-line"></i></span>
+      <h4>Peaceful Ambiance</h4>
+      <p>Ensuring calm and uninterrupted rest for all guests.</p>
+    </div>
+    <div class="feature__card">
+      <span><i class="ri-map-pin-line"></i></span>
+      <h4>Exclusive Location</h4>
+      <p>Located in prime and accessible areas for your convenience.</p>
+    </div>
+    <div class="feature__card">
+      <span><i class="ri-close-circle-line"></i></span>
+      <h4>Free Cancellation</h4>
+      <p>Flexible booking options in case your plans change.</p>
+    </div>
+    <div class="feature__card">
+      <span><i class="ri-wallet-line"></i></span>
+      <h4>Payment Options</h4>
+      <p>Various convenient payment methods accepted.</p>
+    </div>
+    <div class="feature__card">
+      <span><i class="ri-restaurant-line"></i></span>
+      <h4>Fine Dining</h4>
+      <p>Enjoy exquisite meals prepared by top chefs.</p>
+    </div>
+    <div class="feature__card">
+      <span><i class="ri-gift-line"></i></span>
+      <h4>Exclusive Packages</h4>
+      <p>Special offers and packages for every guest.</p>
+    </div>
+  </div>
+</section>
+
+ <!-- DINING -->
+<section class="menu" id="menu">  <!-- Displays food and drinks offered by the hotel. -->
+  <div class="section__container menu__container">
+    <div class="menu__header">
+      <p class="section__subheader">DINING</p>
+      <h2 class="section__header">Our Ethiopian Food & Drinks</h2>
+    </div>
+    <div class="menu__grid">
+      <div class="menu__card">
+        <img src="assets/images/menu/menu-1.jpg" alt="menu" />
+        <h4>Ethiopian Breakfast Platter</h4>
+        <p>Traditional Ethiopian breakfast served fresh every morning.</p>
+      </div>
+      <div class="menu__card">
+        <img src="assets/images/menu/menu-2.jpg" alt="menu" />
+        <h4>pancakes</h4>
+        <p>Start your day with our authentic Ethiopian coffee or herbal teas.</p>
+      </div>
+      <div class="menu__card">
+        <img src="assets/images/menu/menu-3.jpg" alt="menu" />
+        <h4>premiun ethiopian coffe and tea</h4>
+        <p>Healthy breakfast option packed with nutrients.</p>
+      </div>
+      <div class="menu__card">
+        <img src="assets/images/menu/menu-4.jpg" alt="menu" />
+        <h4>ice-latte</h4>
+        <p>Classic Ethiopian ice-latte.</p>
+      </div>
+      <div class="menu__card">
+        <img src="assets/images/menu/menu-5.jpg" alt="menu" />
+        <h4>hot beef</h4>
+        <p>Finely chopped beef, seasoned and served traditionally.</p>
+      </div>
+      <div class="menu__card">
+        <img src="assets/images/menu/menu-10.jpg" alt="menu" />
+        <h4>enjera with dorowot</h4>
+        <p>Delicious traditional Ethiopian dessert to finish your meal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+
+
+  <!-- AI ASSISTANT -->
+<section class="section__container ai__container" id="ai">  <!-- Section for AI-powered chatbot assistant. -->
+  <p class="section__subheader">AI ASSISTANT</p>
+  <h2 class="section__header">Elysian Concierge AI</h2>
+  <p class="section__description">
+    Ask about rooms, services, or bookings. Get instant responses!
+  </p>
+  <div class="ai__box">
+    <input type="text" id="ai-input" placeholder="Ask a question..." />
+    <button onclick="askAI()">Ask</button>
+  </div>
+  <div id="ai-response" class="ai-response"></div>
+
+  <h3>Room Recommendation</h3>
+  <div class="recommendation">
+    <label>Number of Guests:</label>
+    <input type="number" id="guests-num" placeholder="2" />
+    <label>Room Type:</label>
+    <select id="room-type">
+      <option value="Luxury">Luxury</option>
+      <option value="Family">Family</option>
+      <option value="Penthouse">Penthouse</option>
+    </select>
+    <button onclick="recommendRoom()">Get Recommendation</button>
+    <p id="recommendation-result"></p>
+  </div>
+</section>
+
+
+<!-- VIDEO 2 SECTION -->
+<section class="video-section">
+  <div class="section__container">
+    <p class="section__subheader">EXPERIENCE ELYSIAN</p>
+    <h2 class="section__header">See Our Hotel in Action</h2>
+    <p class="section__description">
+      Take a glimpse of our luxurious rooms, vibrant dining areas, and serene ambiance. 
+      Experience Elysian Palace Hotel like never before.
+    </p>
+    <video autoplay muted loop controls class="video-2">
+      <source src="assets/videos/video-2.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</section>
+
+ <!-- FOOTER   The bottom section of a website    Shows important information
+Copyright
+Branding (hotel name/logo)
+Gives professional look
+Every real website has a footer
+Improves user trust
+Makes the website feel complete and official -->
+  <footer class="footer">
+    <div class="section__container footer__container">
+      <div class="footer__col">
+        <div class="logo footer__logo">
+          <img src="assets/images/news/header-1.jpg" width="50" alt="logo" />
+          <span>ELYSIAN<br />PALACE HOTEL</span>
+        </div>
+        <p class="section__description">
+          Elysian Palace Hotel offers unparalleled luxury, personalized service, 
+          and unforgettable experiences for discerning travelers.
+        </p>
+      </div>
+    </div>
+    <div class="footer__bar">
+      Copyright © 2026 Elysian Palace Hotel. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>   <!-- Connects JavaScript for menu toggle, AI, and interactive functionalities. -->
+
+</body>
+</html>
+
+
+
+<!-- The calendar comes from HTML itself, not your code -->
+ <!-- “The calendar is automatically provided by the browser using the HTML5 input type ‘date’, which improves user experience without needing extra JavaScript.”-->
+  <!-- Remix Icon library  To show a visual icon next to your feature (like “Peaceful Ambiance”)
+Makes the UI more attractive and professional -->
